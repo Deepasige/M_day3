@@ -11,6 +11,7 @@ const Form = () => {
         setFormData({
             ...formData,
             [name]:value
+            
         });
 
     };
