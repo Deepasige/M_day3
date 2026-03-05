@@ -1,125 +1,320 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            scroll-behavior: smooth;
-        }
+<title>S Deepa Portfolio</title>
 
-        /* Navbar */
-        nav {
-            background-color: #222;
-            padding: 15px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-        }
+<style>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
+body{
+margin:0;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+nav{
+background:grey;
+color:white;
+padding:15px;
+position:sticky;
+top:0;
+}
 
-        nav a:hover {
-            color: #00bcd4;
-        }
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+justify-content:center;
+margin:0;
+padding:0;
+}
 
-        /* Sections */
-        section {
-            padding: 80px 20px;
-            text-align: center;
-        }
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
-        #home {
-            background: linear-gradient(to right, #4e73df, #1cc88a);
-            color: white;
-        }
+section{
+padding:60px;
+text-align:center;
+}
 
-        #about {
-            background-color: #f4f4f4;
-        }
+.hero{
+background:#eff6ff;
+}
 
-        #projects {
-            background-color: #e2e2e2;
-        }
+.skills{
+background:#f3f4f6;
+}
 
-        #contact {
-            background-color: #333;
-            color: white;
-        }
+.projects{
+background:white;
+}
 
-        .btn {
-            padding: 10px 20px;
-            background-color: #00bcd4;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+.education{
+background:#f3f4f6;
+}
 
-        .btn:hover {
-            background-color: #0097a7;
-        }
+.achievements{
+background:#f9fafb;
+}
 
-        footer {
-            background: #111;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+.contact{
+background:white;
+}
+
+.skill-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:20px;
+max-width:700px;
+margin:auto;
+}
+
+.skill{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.project{
+background:#f9fafb;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:#2563eb;
+color:white;
+text-align:center;
+padding:10px;
+}
+
+</style>
+
 </head>
 
 <body>
 
+
+<!-- Navbar -->
+
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
 </nav>
 
-<section id="home">
-    <h1>Hello, I'm Deepa 👋</h1>
-    <p>Aspiring Software Developer</p>
-    <button class="btn" onclick="showMessage()">Hire Me</button>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<h1>Hi, I'm S Deepa</h1>
+
+<h3>Computer Science Engineering Student</h3>
+
+<p>
+Motivated, creative, and detail-oriented undergraduate with strong
+foundation in Computer Science fundamentals.
+</p>
+
+<button onclick="downloadResume()">Download Resume</button>
+
 </section>
+
+
+<!-- About -->
 
 <section id="about">
-    <h2>About Me</h2>
-    <p>I am learning Java,
-         Data Structures, 
-         and Web Development.</p>
+
+<h2>About Me</h2>
+
+<p>
+I am currently pursuing B.Tech in Computer Science Engineering
+at Madanapalle Institute of Technology & Science with a CGPA of 9.51.
+I enjoy learning programming and building web applications.
+</p>
+
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <p>✔ Rock Paper Scissors Game</p>
-    <p>✔ Time Delta Calculator</p>
-    <p>✔ Portfolio Website</p>
+
+<!-- Skills -->
+
+<section id="skills" class="skills">
+
+<h2>Skills</h2>
+
+<div class="skill-grid">
+
+<div class="skill">Python</div>
+<div class="skill">C</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">MySQL</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+
+</div>
+
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: deepasige@gmail.com</p>
+
+<!-- Projects -->
+
+<section id="projects" class="projects">
+
+<h2>Projects</h2>
+
+<div class="project-grid">
+
+<div class="project">
+
+<h3>Mind Reader</h3>
+
+<p>
+Web application that helps users create professional resumes.
+</p>
+
+<p><b>Tech:</b> HTML CSS JavaScript</p>
+
+</div>
+
+<div class="project">
+
+<h3>Health Check</h3>
+
+<p>
+Chatbot that provides health information based on symptoms.
+</p>
+
+<p><b>Tech:</b> Python</p>
+
+</div>
+
+<div class="project">
+
+<h3>Secure DevOps</h3>
+
+<p>
+Implemented DevOps practices focusing on secure CI/CD pipelines.
+</p>
+
+<p><b>Tech:</b> DevOps</p>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- Education -->
+
+<section class="education">
+
+<h2>Education</h2>
+
+<p><b>B.Tech Computer Science Engineering</b></p>
+
+<p>Madanapalle Institute of Technology & Science</p>
+
+<p>Expected Graduation: 2027</p>
+
+<p>CGPA: 9.51</p>
+
+</section>
+
+
+<!-- Certifications -->
+
+<section>
+
+<h2>Certifications</h2>
+
+<p>HackerRank Certification in Python</p>
+
+</section>
+
+
+<!-- Achievements -->
+
+<section class="achievements">
+
+<h2>Achievements</h2>
+
+<ul style="list-style:none">
+
+<li>Participated in Arduino Workshop</li>
+<li>Active IEEE Student Chapter Member</li>
+<li>Presented Paper in Conference</li>
+
+</ul>
+
+</section>
+
+
+<!-- Contact -->
+
+<section id="contact" class="contact">
+
+<h2>Contact</h2>
+
+<p>Email: deepasige@gmail.com</p>
+
+<p>
+
+<a href="https://github.com">GitHub</a> |
+<a href="https://linkedin.com">LinkedIn</a>
+
+</p>
+
+</section>
+
 
 <footer>
-    © 2026 Deepa | Portfolio
+
+<p>© 2026 S Deepa Portfolio</p>
+
 </footer>
 
+
 <script>
-    function showMessage() {
-        alert("Thank you for visiting my portfolio!");
-    }
+
+function downloadResume(){
+alert("Add your resume file in same folder named resume.pdf");
+window.open("resume.pdf");
+}
+
 </script>
+
 
 </body>
 </html>
